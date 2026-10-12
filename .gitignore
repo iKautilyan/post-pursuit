@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment files
+.env
+.env.*
+
+# IDE / editor
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# Logs and runtime data
+*.log
+*.pid
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Build / distribution
+build/
+dist/
+*.spec
+
+# Database / local app data
+*.sqlite3
+*.db
+scraper/app/data/generated/
+
+# Browser / scraper artifacts
+data/chrome_user_data/
+**/chrome_user_data/
+
+# Misc
+*.tmp
