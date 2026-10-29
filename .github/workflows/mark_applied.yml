@@ -1,0 +1,74 @@
+name: Mark Job as Applied
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  update-applied-status:
+    if: startsWith(github.event.issue.title, 'applied:') || startsWith(github.event.issue.title, 'apply:')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Update Job Application Status in Database
+        id: update_db
+        run: |
+          python3 -c "
+          import re, sys, os
+          sys.path.insert(0, 'scraper')
+          from app.db import update_application_status, get_job
+
+          issue_title = '''${{ github.event.issue.title }}'''
+          match = re.search(r'(?:applied|apply):(\d+)', issue_title)
+          if not match:
+              print('Could not extract job ID from issue title.')
+              sys.exit(1)
+
+          job_id = match.group(1).strip()
+          job = get_job(job_id)
+          title = job.get('title', 'Unknown role') if job else 'Unknown role'
+          company = job.get('company', 'Unknown company') if job else 'Unknown company'
+
+          update_application_status(job_id, 'applied', notes='Marked applied via mobile Slack issue trigger')
+          print(f'Successfully marked job {job_id} ({title} @ {company}) as applied in database.')
+          "
+
+      - name: Commit & Push Updated Jobs Database
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add scraper/data/jobs.db
+          if git diff --staged --quiet; then
+            echo "No database changes."
+          else
+            git commit -m "chore(db): mark job applied via mobile trigger [skip ci]"
+            git push
+          fi
+
+      - name: Close Issue with Confirmation Comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: "🎉 **Application Recorded!**\n\nThis job has been marked as **Applied** in your database.\nIt will no longer appear in future scheduled Slack reminder runs."
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: "closed"
+            });

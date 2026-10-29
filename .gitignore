@@ -42,6 +42,7 @@ dist/
 # Database / local app data
 *.sqlite3
 *.db
+!scraper/data/jobs.db
 scraper/app/data/generated/
 
 # Browser / scraper artifacts
