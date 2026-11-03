@@ -100,7 +100,9 @@
     "c#",
     ".net",
     "swift",
-    "kotlin"
+    "kotlin",
+    "unity",
+    "c#"
   ],
   "exclude_seniority": [
     "intern",
