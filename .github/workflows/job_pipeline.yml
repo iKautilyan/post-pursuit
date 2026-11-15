@@ -79,5 +79,6 @@ jobs:
             echo "No database changes to commit."
           else
             git commit -m "chore(db): sync jobs database [skip ci]"
-            git push
+            git pull --rebase origin main
+            git push origin main
           fi

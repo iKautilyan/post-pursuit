@@ -21,6 +21,12 @@ def get_slack_config() -> Dict[str, Optional[str]]:
     webhook_url = os.environ.get("SLACK_WEBHOOK_URL")
     github_repo = os.environ.get("GITHUB_REPOSITORY", "ritode/job-automation")
 
+    # Diagnostic logging (masks sensitive parts)
+    token_status = f"Found (starts with {bot_token[:6]}..., len={len(bot_token)})" if bot_token else "EMPTY / NOT SET"
+    channel_status = f"Found ({channel_id})" if channel_id else "EMPTY / NOT SET"
+    webhook_status = "Found" if webhook_url else "EMPTY / NOT SET"
+    print(f"[Slack Config Debug] SLACK_BOT_TOKEN: {token_status} | SLACK_CHANNEL_ID: {channel_status} | SLACK_WEBHOOK_URL: {webhook_status} | SDK_AVAILABLE: {SLACK_SDK_AVAILABLE}")
+
     # Fallback to local .env if not found in os.environ
     if not (bot_token or webhook_url):
         env_file = Path(__file__).resolve().parent.parent / ".env"
