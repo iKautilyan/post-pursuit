@@ -1,130 +1,163 @@
 {
-  "name": "Ritobrita De",
-  "email": "deritobrita@gmail.com",
+  "name": "Kautilyan I",
+  "email": "ikautilyan@gmail.com",
+  "phone": "+919626645802",
   "location": "Bangalore, India",
   "target_roles": [
-    "frontend developer",
-    "frontend engineer",
-    "react developer",
-    "full stack developer",
-    "full stack engineer",
-    "fullstack developer",
-    "software engineer",
+    "unity developer",
+    "unity engineer",
+    "webgl developer",
+    "xr developer",
+    "ar/vr developer",
+    "simulation developer",
+    "3d application developer",
+    "gameplay programmer",
+    "c# developer",
     "software developer",
-    "web developer",
-    "web engineer",
-    "ui engineer"
+    "software engineer"
   ],
   "years_of_experience": 6,
   "min_score": 7.0,
-  "languages": {
-    "English": "C1",
-    "German": "A2"
-  },
   "primary_skills": [
-    "reactjs",
-    "react",
-    "typescript",
-    "javascript",
-    "python",
-    "django",
-    "fastapi",
-    "fast-api",
-    "nextjs",
-    "next.js"
+    "unity",
+    "c#",
+    "webgl",
+    "xr",
+    "vr",
+    "ar",
+    "mr",
+    "interactive 3d",
+    "simulation development",
+    "unreal engine",
+    "godot",
+    "nvidia omniverse"
   ],
   "secondary_skills": [
-    "frontend",
-    "backend",
-    "full stack",
-    "fullstack",
-    "web",
-    "development",
-    "azure",
-    "aws",
-    "databricks",
-    "css",
-    "html",
-    "scss",
-    "material ui",
-    "mui",
-    "antdesign",
-    "ant design",
-    "css3",
-    "redis",
-    "html5",
-    "zustand",
-    "redux",
-    "xstate",
-    "threejs",
-    "three.js",
-    "jest",
-    "tailwind",
-    "tailwindcss",
-    "figma",
-    "pytest",
-    "postgresql",
-    "mysql",
-    "docker",
-    "github actions",
-    "ci/cd",
-    "application security",
-    "jwt",
-    "rbac",
-    "csp",
-    "csrf protection",
-    "csrf",
-    "secure file handling"
+    "digital twins",
+    "browser-based applications",
+    "cross-platform development",
+    "pc development",
+    "android",
+    "standalone vr",
+    "multiplayer networking",
+    "photon pun2",
+    "navmesh",
+    "a* pathfinding",
+    "finite state machines",
+    "behavior trees",
+    "ai behavior systems",
+    "arduino simulation",
+    "electronics simulation",
+    "circuit simulation",
+    "interactive learning systems",
+    "assessment modules",
+    "3d visualization",
+    "rest api integration",
+    "hardware integration",
+    "holosuit",
+    "modular architecture",
+    "team leadership",
+    "agile methodologies",
+    ".net maui",
+    "blazor",
+    "python"
   ],
   "ai_skills": [
-    "ai",
-    "copilot",
-    "antigravity",
-    "devin",
-    "claude",
-    "llm",
-    "ai integration",
-    "agentic ai",
-    "prompt engineering"
+    "game ai",
+    "npc behavior",
+    "finite state machines",
+    "behavior trees",
+    "navmesh navigation",
+    "a* pathfinding"
   ],
   "offtarget_tech": [
-    "cobol",
-    "abap",
-    "sap",
-    "salesforce",
-    "ruby",
-    "rails",
-    "php",
-    "laravel",
-    "symfony",
-    "c#",
-    ".net",
-    "swift",
-    "kotlin",
-    "unity",
-    "c#"
+    "saas",
+    "robotics",
+    "user interface",
+    "kiosk",
+    "sql",
+    "database management"
   ],
   "exclude_seniority": [
     "intern",
     "internship",
-    "werkstudent",
     "working student",
+    "werkstudent",
     "praktikum",
     "ausbildung",
-    "trainee",
-    "studentische"
+    "trainee"
   ],
   "target_regions": [
-    "Germany",
-    "Netherlands",
-    "United Kingdom",
-    "Switzerland",
-    "Austria",
-    "Sweden",
-    "Ireland",
-    "Dubai",
-    "United Arab Emirates",
-    "Australia",
-    "New Zealand"
+    "India",
+    "Remote"
+  ],
+  "notable_projects": [
+    {
+      "name": "Arduino Simulator",
+      "technologies": [
+        "Unity",
+        "WebGL",
+        "C#"
+      ],
+      "description": "Browser-based Arduino simulation environment for interacting with virtual electronics components and circuit-based workflows."
+    },
+    {
+      "name": "ATRIA - Interactive Electronics Learning Platform",
+      "technologies": [
+        "Unity",
+        "WebGL",
+        "Arduino"
+      ],
+      "description": "End-to-end browser-based learning environment for electronics and Arduino, with practical exercises, practice workflows, and testing modules."
+    },
+    {
+      "name": "ERNET - Electronics Assessment Platform",
+      "technologies": [
+        "Unity",
+        "WebGL",
+        "Circuit Simulation"
+      ],
+      "description": "Custom browser-based assessment module for evaluating practical electronics skills through circuit-building tasks using Arduino boards, resistors, diodes, and other electronic components; used for a scholarship examination."
+    },
+    {
+      "name": "Daimler Product Showcase",
+      "technologies": [
+        "Unity",
+        "WebGL",
+        "VR",
+        "XR"
+      ],
+      "description": "Cross-platform product presentation application for real-time product visualization across WebGL, VR, and mixed-reality environments, including shared controls, annotations, and spatial synchronization."
+    },
+    {
+      "name": "VirTac - Indian Army",
+      "technologies": [
+        "Unity",
+        "VR",
+        "AI",
+        "NavMesh",
+        "Behavior Trees"
+      ],
+      "description": "VR combat training simulations with AI-driven NPCs, NavMesh navigation, behavior trees, and instructor tools providing god's-eye and first-person perspectives."
+    },
+    {
+      "name": "Tactical Training - 10v10",
+      "technologies": [
+        "Unity",
+        "VR",
+        "Digital Twins",
+        "AI"
+      ],
+      "description": "Large-area VR team combat simulation in a 33 x 33 ft digital twin, featuring realistic weapon interactions, damage systems, and team-based AI."
+    },
+    {
+      "name": "HoloEngine",
+      "technologies": [
+        ".NET MAUI",
+        "Blazor",
+        "3D Visualization"
+      ],
+      "description": "Holosuit diagnostic application with 3D motion-data visualization and cross-device access."
+    }
   ]
 }
