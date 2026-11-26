@@ -1,209 +1,288 @@
-\documentclass[10.5pt,a4paper]{article}
+
+\documentclass[a4paper,10pt]{article}
 
 % ---------- Packages ----------
-\usepackage[margin=0.72in]{geometry}
-\usepackage{enumitem}
-\usepackage{hyperref}
+\usepackage[a4paper,margin=0.65in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
 \usepackage{microtype}
 
-\usepackage{iftex}
-\ifpdftex
-  \input{glyphtounicode}
-  \pdfgentounicode=1
-\fi
+% ---------- Formatting ----------
+\definecolor{headingcolor}{RGB}{35,55,80}
 
-% ---------- General formatting ----------
+\pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt}
-
+\setlength{\parskip}{2pt}
 \setlist[itemize]{
-    leftmargin=1.25em,
+    leftmargin=1.2em,
     itemsep=1pt,
     topsep=2pt,
-    parsep=0pt,
-    partopsep=0pt
+    parsep=0pt
 }
 
-\hypersetup{
-    colorlinks=true,
-    urlcolor=black,
-    linkcolor=black
+\titleformat{\section}
+  {\large\bfseries\color{headingcolor}}
+  {}{0em}{}[\titlerule]
+
+\titlespacing*{\section}{0pt}{9pt}{4pt}
+
+% ---------- Custom Commands ----------
+\newcommand{\experience}[4]{
+    \textbf{#1} \hfill \textit{#2}\\
+    \textit{#3}\\[-3pt]
+    #4
+    \vspace{3pt}
 }
 
-% ---------- Section formatting ----------
-\newcommand{\sectiontitle}[1]{
-    \vspace{8pt}
-    {\large\textbf{#1}}
-    \par
-    \vspace{2pt}
-    \hrule
-    \vspace{4pt}
-}
-
-% ---------- Experience heading ----------
-\newcommand{\experience}[2]{
-    \noindent
-    \textbf{#1}\hfill{#2}
-    \par
-}
-\newcommand{\clientproject}[1]{
-    \vspace{4pt}
-    \noindent
-    \hspace{10pt}\textbf{#1}
-    \par
-}
+\newcommand{\skill}[1]{\textbf{#1}}
 
 \begin{document}
 
-% =========================================================
-% HEADER
-% =========================================================
+% ---------- Header ----------
+\begin{center}
+    {\LARGE\bfseries KAUTILYAN I}\\[4pt]
+    {\large Software Developer}\\[5pt]
+    \href{tel:+919626645802}{+91 96266 45802}
+    \quad $|$ \quad
+    \href{mailto:ikautilyan@gmail.com}{ikautilyan@gmail.com}
+\end{center}
 
-{\LARGE\textbf{Ritobrita De}}
-\par
-\vspace{3pt}
+% ---------- Summary ----------
+\section{Professional Summary}
 
-Bangalore, India \quad
-\href{mailto:deritobrita@gmail.com}{deritobrita@gmail.com} \quad
-\href{https://linkedin.com/in/ritobrita-de}{linkedin.com/in/ritobrita-de} \quad
-\href{https://github.com/ritode}{github.com/ritode} \quad
-\href{https://ritode.github.io}{ritode.github.io}
+Senior Software Developer specializing in Unity, WebGL, interactive
+3D applications, and cross-platform XR experiences. Experienced in
+developing browser-based simulations, virtual electronics labs,
+Arduino learning environments, digital twins, and real-time product
+showcases. Proficient in C\#, Unity, WebGL, multiplayer networking,
+AI behavior systems, REST API integration, and modular application
+architecture. Experienced in leading development teams, building
+interactive learning and assessment systems, and delivering
+applications across web browsers, PC, mobile, VR, and mixed reality.
 
-% =========================================================
-% SUMMARY
-% =========================================================
+% ---------- Experience ----------
+\section{Professional Experience}
 
-\sectiontitle{Summary}
-
-\textbf{Software Engineer} with \textbf{6+ years of experience} developing \textbf{enterprise-grade web and analytics platforms} across automotive, retail, education, and data-driven applications. Strong full-stack ownership spanning \textbf{React, Python, application security, data platforms, and DevOps}. Skilled at building scalable products for global clients, with a focus on performance, usability, security, and maintainable engineering practices.
-
-% =========================================================
-% SKILLS
-% =========================================================
-
-\sectiontitle{Skills}
-
-\textbf{Languages:} JavaScript, TypeScript, Python, HTML5, CSS3
-
-\textbf{Frontend:} React.js, Next.js, Redux, Zustand, XState, Three.js, Jest, MUI, Ant Design, Tailwind CSS, Figma
-
-\textbf{Backend:} FastAPI, Django, PyTest
-
-\textbf{Data:} Databricks, PostgreSQL, MySQL, Redis
-
-\textbf{Cloud \& DevOps:} Docker, Azure, AWS, GitHub Actions
-
-\textbf{Engineering:} Application Security, JWT, RBAC, CSP, CSRF Protection, Secure File Handling
-
-\textbf{AI \& Tooling:} LLM Integration, Copilot, Prompt Engineering, Agentic AI Workflows
-
-% =========================================================
-% EXPERIENCE
-% =========================================================
-
-\sectiontitle{Experience}
-
-% ---------- Fractal ----------
-\experience{Full Stack Developer --- Fractal Analytics}{Sep 2024 -- Present}
-
+\experience
+{Senior Developer -- Freelance}
+{Oct 2025 -- Sep 2026}
+{Freelance}
+{
 \begin{itemize}
-    \item Own end-to-end development of enterprise analytics applications, contributing across \textbf{product design, frontend architecture, backend APIs, data integration, security, and deployment}.
-
-    \item Implement secure software engineering practices across applications, such as \textbf{authentication, authorization, secure data handling, input validation}, and protection against common web vulnerabilities.
-
-    \item Work closely with client stakeholders and cross-functional teams to create maintainable, user-centric technical solutions based on business requirements.
-
-    \item Wrote comprehensive \textbf{backend and frontend test suites using PyTest and Jest} to improve release confidence and production readiness.
-
-    \item Mentor interns in full-stack development, code quality, debugging, and software engineering best practices.
+    \item Delivered web applications on time and within budget.
+    \item Used modern frameworks to streamline development processes
+          and reduce implementation costs.
+    \item Created comprehensive technical documentation to simplify
+          project handovers and maintenance.
 \end{itemize}
+}
 
-\clientproject{Client: Mercedes-Benz (MBRDI) --- ProFeld 2.0}
-
-\begin{itemize}[label={--},leftmargin=20pt]
-    \item Built an analytics platform for \textbf{vehicle survival analysis and failure-data investigation}, enabling users to explore vehicle reliability through multi-screen workflows, advanced visualizations, and comparative analysis.
-
-    \item Developed \textbf{highly customized Plotly visualizations} with interactive analytical features, custom curve fitting, configurable chart behavior, and interactive visual overlays.
-
-    \item Designed and implemented \textbf{dynamic filtering} with millions of unique possibilities \textbf{integrating Databricks data with Redis caching} to improve responsiveness for frequently accessed datasets.
-
-    \item Built an \textbf{AI Bot} that takes key user inputs and automatically retrieves required data, enabling dependent analysis steps to run without user intervention and \textbf{reducing an average 15-minute active process to a one-click report-generation experience}.
-
-    \item Developed \textbf{administrative tooling} for user management, role-based permissions, and activity monitoring, supporting controlled access and operational oversight.
-
-    \item Built features for saving and sharing analysis states, generating downloadable reports.
-\end{itemize}
-
-\clientproject{Client: Mondelez --- Trade Inventory Simulator}
-
-\begin{itemize}[label={--},leftmargin=20pt]
-    \item Developed an interactive analytics dashboard for inventory and sales data, enabling users to investigate trends and support planning and forecasting decisions.
-\end{itemize}
-\vspace{6pt}
-% ---------- Freelance ----------
-\experience{Freelance Web Developer}{Mar 2024 -- Aug 2024}
-
+\experience
+{Senior Developer}
+{Apr 2025 -- Sep 2025}
+{Liquidnitrogames, Hyderabad, Telangana}
+{
 \begin{itemize}
-    \item Designed, developed, and deployed \textbf{responsive web applications and marketing websites} for startups and small businesses, delivering interactive interfaces, animations, contact forms, and cross-browser compatibility.
+    \item Optimized bot performance, reducing load times by an average
+          of 30\%.
+    \item Built modular AI components to simplify feature extensions,
+          behavior tuning, and scalable bot development.
+    \item Enhanced AI behavior in a Unity-based multiplayer game using
+          finite state machines and A*-based movement.
+    \item Improved navigation and pathfinding performance to deliver
+          more responsive in-game movement.
 \end{itemize}
-\vspace{6pt}
-% ---------- Dragonfruit ----------
-\experience{Software Developer (Contract) --- Dragonfruit}{Sep 2023 -- Feb 2024}
-Developed features across a \textbf{suite of surveillance video analytics and business intelligence applications} used by major US retailers, including Lululemon and Goodwill.
+}
+
+\experience
+{Senior Developer -- AR/VR Team}
+{Jul 2024 -- Dec 2024}
+{DTICI, Bangalore, Karnataka}
+{
 \begin{itemize}
-    \item Built an \textbf{alarm disarming workflow}, enabling operators to scan a QR code and trigger alarm disarming from the application based on their role privileges.
-
-    \item Built an \textbf{LLM-powered event summarization} feature that analyzes events and associated artifacts captured during video review to automatically generate concise incident summaries.
-
-    \item Implemented a \textbf{photo capture and recognition workflow} for a license plate recognition application, enabling operators to capture and process vehicle images within the application.
-
-    \item \textbf{Led UI/UX revamps} across multiple applications, redesigning navigation and information presentation to simplify and improve usability.
+    \item Migrated a legacy product showcase into a unified XR platform
+          supporting VR, mobile, and web browser experiences.
+    \item Implemented live multi-user sessions with shared controls,
+          annotations, spatial synchronization, and mixed-reality
+          passthrough.
+    \item Delivered consistent, synchronized experiences across VR,
+          mobile, and web platforms.
 \end{itemize}
-\vspace{6pt}
-% ---------- Avataar ----------
-\experience{3D Front End Developer --- Avataar}{Jun 2021 -- Aug 2023}
+}
 
+\experience
+{Freelance Developer}
+{Nov 2023 -- May 2024}
+{Independent}
+{
 \begin{itemize}
-    \item Developed a \textbf{Web3D SDK} adopted for building interactive 3D scenes, including compressed model and texture loading, realistic lighting, and line-of-sight-based optimization for consistent performance across projects.
-
-    \item Developed proof-of-concept \textbf{virtual room shopping experiences} for Pepperfry, enabling users to visualize products from their cart within curated model rooms or their own spaces using AR before purchase.
-
-    \item Built \textbf{Web3D and AR-based product visualization and discovery experiences} for furniture, appliances, and automotive products for enterprise clients including Samsung, Pepperfry, and Bajaj.
-
-    \item Optimized 3D rendering, asset-loading and lighting workflows to balance \textbf{photorealistic visual quality with performance across devices} and varying project requirements.
+    \item Implemented responsive designs to improve usability across
+          different devices and screen sizes.
+    \item Used modern development frameworks to streamline workflows
+          and reduce project costs.
+    \item Conducted thorough testing, targeting reliable, high-quality
+          client releases.
+    \item Managed multiple projects while providing ongoing support
+          and maintenance.
 \end{itemize}
-\vspace{6pt}
-% ---------- Holosuit ----------
-\experience{Software Developer --- Holosuit}{Jun 2020 -- Jun 2021}
+}
 
-\begin{itemize} 
-\item Led development of \textbf{immersive educational applications} converting BSc, BTech, and NCERT academic content into interactive 3D experiences across PC, Web, Kinect-enabled HoloProjector, and mobile AR platforms. 
-\item Developed a Web3D-based quiz framework supporting 30+ interactive levels for the National Skill Development Corporation (NSDC), deployed to 500+ participants. 
-\item Developed a proof-of-concept \textbf{AR cricket training platform} for the Yuvraj Singh Academy, using 3D pose estimation and inverse kinematics to compare user movements against expected cricket postures, identify deviations, and provide guided instruction for improving technique.
+\experience
+{Senior Developer}
+{Dec 2020 -- Nov 2023}
+{Holoworld, Mysore, Karnataka}
+{
+\begin{itemize}
+    \item Led the design and development of AR/VR training and
+          simulation products for education, utilities, and defense.
+    \item Introduced agile methodologies, improving team efficiency
+          by 25\%.
+    \item Developed scalable software solutions and improved user
+          experience across XR applications.
+    \item Collaborated with cross-functional teams to align technical
+          implementation with project requirements.
+    \item Mentored junior developers, conducted code reviews, and
+          promoted software engineering best practices.
+    \item Automated testing processes to improve code quality and
+          reduce defects.
+    \item Managed project timelines and deliverables while meeting
+          client expectations.
+    \item Integrated Holosuit motion-tracking hardware and supported
+          multi-device deployments across Vive, Oculus, PC, and
+          standalone VR platforms.
+\end{itemize}
+}
+
+\experience
+{Junior Developer}
+{Mar 2020 -- Nov 2020}
+{Holoworld, Mysore, Karnataka}
+{
+\begin{itemize}
+    \item Supported software deployment processes and production
+          releases.
+    \item Learned and applied new programming languages, development
+          tools, and workflows to support team requirements.
+\end{itemize}
+}
+
+% ---------- Projects ----------
+\section{Notable Projects}
+
+\textbf{Arduino Simulator}
+\hfill \textit{Unity, WebGL, C\#}
+\begin{itemize}
+    \item Developed a browser-based Arduino simulation environment
+    enabling users to interact with virtual electronics components
+    and experiment with circuit-based workflows.
 \end{itemize}
 
-% =========================================================
-% EDUCATION
-% =========================================================
+\textbf{ATRIA - Interactive Electronics Learning Platform}
+\hfill \textit{Unity, WebGL, Arduino}
+\begin{itemize}
+    \item Developed an end-to-end browser-based learning environment
+    for electronics and Arduino, integrating practical exercises
+    with testing and assessment modules.
+    \item Enabled users to learn and practice electronics concepts
+    through interactive simulations accessible on the web.
+\end{itemize}
 
-\sectiontitle{Education}
+\textbf{ERNET - Electronics Assessment Platform}
+\hfill \textit{Unity, WebGL, Circuit Simulation}
+\begin{itemize}
+    \item Developed a custom browser-based assessment module for
+    evaluating practical electronics skills through circuit-building
+    tasks involving Arduino boards, resistors, diodes, and other
+    electronic components.
+    \item Supported skills-based evaluation for a scholarship
+    examination through interactive circuit design challenges.
+\end{itemize}
 
-\textbf{B.Tech in Electronics and Communication Engineering --- Biomedical Specialization}
-\hfill
-\textit{2016 -- 2020}
-\par
-Vellore Institute of Technology
-\par
-GPA: 8.73 / 10
+\textbf{Daimler Product Showcase}
+\hfill \textit{Unity, WebGL, VR, XR}
+\begin{itemize}
+    \item Developed a cross-platform product presentation application
+    enabling real-time product visualization across WebGL, VR,
+    and mixed-reality environments.
+    \item Supported consistent product experiences across platforms,
+    including interactive 3D exploration and multi-user sessions
+    with shared controls, annotations, and spatial synchronization.
+\end{itemize}
 
-% =========================================================
-% LANGUAGES
-% =========================================================
+\textbf{VirTac - Indian Army}
+\hfill \textit{Unity, VR, AI, NavMesh, Behavior Trees}
+\begin{itemize}
+    \item Developed immersive VR combat training simulations featuring
+    AI-driven NPCs using NavMesh navigation and behavior trees.
+    \item Implemented instructor tools with overhead god's-eye
+    views and first-person perspectives for simulation monitoring.
+\end{itemize}
 
-\sectiontitle{Languages}
+\textbf{Tactical Training - 10v10}
+\hfill \textit{Unity, VR, Digital Twins, AI}
+\begin{itemize}
+    \item Designed a large-scale VR team combat simulation within a
+    33 x 33 ft digital twin environment.
+    \item Implemented realistic weapon interactions, damage systems,
+    and team-based AI to support immersive tactical training.
+\end{itemize}
 
-English (C1), German (A2)
+\textbf{HoloEngine}
+\hfill \textit{.NET MAUI, Blazor, 3D Visualization}
+\begin{itemize}
+    \item Built a Holosuit diagnostic application using .NET MAUI
+    and Blazor, featuring 3D motion data visualization and
+    cross-device access.
+\end{itemize}
+
+
+
+% ---------- Skills ----------
+\section{Technical Skills}
+
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}l X@{}}
+Game Engines and 3D &
+Unity, Unreal Engine, Godot, NVIDIA Omniverse \\
+
+Web and Cross-Platform &
+WebGL, Browser-Based 3D Applications, Cross-Platform
+Deployment, Full-Stack Development \\
+
+Programming &
+C\#, Python, Object-Oriented Programming \\
+
+Simulation and XR &
+Interactive Simulations, Digital Twins, VR, AR, MR, XR,
+3D Visualization \\
+
+AI and Navigation &
+Finite State Machines, Behavior Trees, NavMesh, A* Pathfinding \\
+
+Networking and Integration &
+Multiplayer Networking, Photon PUN2, REST APIs,
+Hardware Integration \\
+
+Development Practices &
+Modular Architecture, Testing, Code Reviews, Agile Methodologies
+\end{tabularx}
+
+% ---------- Education ----------
+\section{Education}
+
+\textbf{Glocal University}
+\hfill \textit{Jul 2023 -- Jun 2024}\\
+Bachelor of Technology in Mechanical Engineering
+
+\vspace{4pt}
+
+\textbf{Amrita School of Engineering}
+\hfill \textit{Aug 2014 -- Jul 2018}\\
+Bachelor of Technology in Mechanical Engineering
+\textit{(Discontinued)}
 
 \end{document}
