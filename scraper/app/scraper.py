@@ -14,32 +14,11 @@ from app.filters import detect_seniority, load_profile
 # --------------------------------------------------
 
 SEARCHES = [
-    # Europe - Germany
-    {"keywords": "Frontend Developer", "location": "Germany"},
-    {"keywords": "React Developer", "location": "Germany"},
-    {"keywords": "Full Stack Developer", "location": "Germany"},
-
-    # Europe - Netherlands & Ireland
-    {"keywords": "Frontend Developer", "location": "Netherlands"},
-    {"keywords": "Full Stack Developer", "location": "Netherlands"},
-    {"keywords": "Frontend Developer", "location": "Ireland"},
-
-    # Europe - UK & Switzerland
-    {"keywords": "React Developer", "location": "United Kingdom"},
-    {"keywords": "Full Stack Developer", "location": "United Kingdom"},
-    {"keywords": "Frontend Developer", "location": "Switzerland"},
-
-    # Middle East - Dubai / UAE
-    {"keywords": "Frontend Developer", "location": "Dubai"},
-    {"keywords": "React Developer", "location": "Dubai"},
-    {"keywords": "Full Stack Developer", "location": "United Arab Emirates"},
-
-    # Australia & New Zealand
-    {"keywords": "Frontend Developer", "location": "Australia"},
-    {"keywords": "React Developer", "location": "Australia"},
-    {"keywords": "Full Stack Developer", "location": "Australia"},
-    {"keywords": "Frontend Developer", "location": "New Zealand"},
-    {"keywords": "Full Stack Developer", "location": "New Zealand"},
+    # Unity
+    {"keywords": "Unity Developer", "location": "India"},
+    {"keywords": "Unity 3D Developer", "location": "India"},
+    {"keywords": "Unity Developer", "location": "Remote"},
+    
 ]
 
 # Default max detail pages to scrape per run to avoid HTTP timeout.
