@@ -16,12 +16,12 @@ def load_profile():
     return {
         "years_of_experience": 6,
         "min_score": 7.0,
-        "primary_skills": ["react", "typescript", "javascript", "python", "django", "fastapi", "nextjs"],
+        "primary_skills": ["unity", "c#", ".net"],
         "secondary_skills": [],
         "ai_skills": [],
         "offtarget_tech": [],
         "exclude_seniority": ["intern", "werkstudent", "trainee", "praktikum"],
-        "target_roles": ["frontend", "react", "full stack", "fullstack", "software engineer"]
+        "target_roles": ["game developer", "game dev", "software engineer"]
     }
 
 
